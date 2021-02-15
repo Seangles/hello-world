@@ -1,0 +1,219 @@
+hmtl, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Nunito Sans', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: 'Yeseva One', Georgia, 'Times New Roman', Times, serif; */
+}
+
+/* * CONTAINERS */
+.container {
+    box-sizing: border-box;
+	width: 1200px;
+	max-width: 100%;
+	padding: 16px;
+	margin: 0 auto;
+}
+
+/* Buttons */
+button[class^="button-"] {
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
+    border-radius: 2px;
+    padding: 1.8em 0;
+    min-width: 19em;
+    font-style: italic;
+    border: none;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+button.button-golden {
+    background-color: #E3B873;
+    color: white;
+}
+button.button-transparent {
+    border: 1px solid white;
+    background: none;
+    color: white;
+    box-shadow: none;
+}
+button.header-button {
+    padding: 1.1em 0;
+    min-width: 14.5em;
+}
+
+/* Colors */
+.golden {
+    color: #E3B873;
+}
+
+/* * HEADER */
+.main-header {
+    background-color: #131313;
+}
+
+.main-header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+    text-transform: uppercase;
+}
+
+/* Header style */
+.main-header a {
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 15px;
+    padding: 0.5em 1.5em;
+}
+
+.mh-name a, .mh-number a {
+    color: #E3B873;
+}
+.mh-name a {
+    padding-left: 0;
+}
+.mh-number a {
+    text-decoration: underline;
+}
+
+/* Header navigation style */
+.main-nav-list {
+	/* margin: 1em 0 .5em; */
+	text-align: center;
+    padding: 0;
+}
+.main-nav-list li {
+	display: inline;
+}
+.main-nav-list a {
+    color: white;
+}
+
+/* MAIN CONTENT */
+
+h1,h2,h3,h4 {
+    font-family: 'Yeseva One', Georgia, 'Times New Roman', Times, serif;
+    color: #E3B873;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+section.promo {
+    position: relative;
+    background: url(../img/bg/block1.jpg) no-repeat center center/cover;
+    color: white;
+}
+.aligner{
+    width: 33em;
+    max-width: 100%;
+    margin-top: 12em;
+    margin-bottom: 12em;
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    padding-left: 2em;
+}
+section.promo h1 {
+    color: white;
+    font-size: 2.5em;
+    /* line-height: 53px; */
+}
+section.promo p {
+    font-size: 22px;
+    line-height: 36px;
+}
+.promo_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.promo_buttons .button-transparent {
+    margin-left: auto;
+    margin-right: auto;
+}
+section.promo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* Projects */
+.projects {
+    background-color: black;
+    color: white;
+}
+.projects_tabs {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    text-transform: uppercase;
+	/* width: 1200px; */
+	/* max-width: 100%; */
+	padding: 16px;
+	margin: 0 auto;
+    font-family: 'Yeseva One', Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+.projects_list {
+    justify-content: flex-start;
+}
+.projects_tabs li {
+    display: inline;
+    padding-right: 3em;
+}
+.projects_tabs a{
+    text-decoration: none;
+    color: #FFF5;
+    padding-bottom: 5px;
+}
+.projects_list .active.golden {
+    color: #E3B873;
+    border-bottom: 1px solid #E3B873;
+}
+
+.projects_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+}
+
+.projects_1main {
+    grid-row-start: 1;
+}
+
+.projects_3submain {
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.projects_4nav {
+    grid-row: 3/3;
+}
+
+.projects_2picture {
+    grid-row: 1/4;
+    grid-column-start: 2;
+}
+
+.projects_nav_list li, .projects_nav_dots_list, .projects_nav_dots_list li {
+    display: inline;
+    padding: 0;
+}
+
+.projects_nav_arrow {
+    width: 20px;
+    height: 11px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    outline:none;
+    background-color: white;
+}
+.projects_nav_arrow .projects_nav_arrow-left {
+    background: url(../icon/nav-arrow-left.svg);
+}
