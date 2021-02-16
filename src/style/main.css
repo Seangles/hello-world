@@ -200,20 +200,39 @@ section.promo::after {
     grid-column-start: 2;
 }
 
-.projects_nav_list li, .projects_nav_dots_list, .projects_nav_dots_list li {
-    display: inline;
+/* Projects navigation icons */
+
+.projects_4nav ul {
     padding: 0;
 }
-
-.projects_nav_arrow {
-    width: 20px;
-    height: 11px;
+.projects_nav_list {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    max-width: 100%;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.projects_nav_list li {
+    display: inline;
+}
+.projects_nav_arrow, .projects_nav_dot {
     border: none;
     outline: none;
     cursor: pointer;
-    outline:none;
-    background-color: white;
+    /* background-size: 80px 80px; */
+    display: inline-block;
+    background-color: #0000;
 }
-.projects_nav_arrow .projects_nav_arrow-left {
-    background: url(../icon/nav-arrow-left.svg);
+.projects_nav_dots_list {
+    position: relative;
+    display: inline-block;
+    top:-7px;
+    width: auto;
+}
+.projects_nav_arrow:only-child, .projects_nav_dot:only-child {
+    color: white;
+}
+.projects_nav_dot:only-child {
+    font-size: xx-small;
 }
