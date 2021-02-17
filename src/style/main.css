@@ -156,12 +156,16 @@ section.promo::after {
 	/* width: 1200px; */
 	/* max-width: 100%; */
 	padding: 16px;
+    padding-right: 0;
 	margin: 0 auto;
     font-family: 'Yeseva One', Georgia, 'Times New Roman', Times, serif;
     font-size: 14px;
 }
 .projects_list {
     justify-content: flex-start;
+}
+.projects_list .tabs_last_li {
+    padding-right: 0;
 }
 .projects_tabs li {
     display: inline;
@@ -185,11 +189,15 @@ section.promo::after {
 
 .projects_1main {
     grid-row-start: 1;
+    margin-right: 2em;
 }
 
 .projects_3submain {
     grid-row-start: 2;
     grid-row-end: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 .projects_4nav {
     grid-row: 3/3;
@@ -198,6 +206,8 @@ section.promo::after {
 .projects_2picture {
     grid-row: 1/4;
     grid-column-start: 2;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* Projects navigation icons */
@@ -227,12 +237,29 @@ section.promo::after {
 .projects_nav_dots_list {
     position: relative;
     display: inline-block;
-    top:-7px;
+    /* top:-7px; */
     width: auto;
 }
-.projects_nav_arrow:only-child, .projects_nav_dot:only-child {
+.projects_nav_arrow:only-child {
     color: white;
 }
 .projects_nav_dot:only-child {
     font-size: xx-small;
+    height: 28px;
+    color: #fff6
 }
+.projects_nav_dot.nav_active {
+    color: white;
+}
+
+/* Projects photo style */
+.projects_2picture img {
+    width: 500px;
+    /* height: 355px; */
+    max-width: 100%;
+    /* max-height: 100%; */
+    align-self: flex-start;
+}
+
+/* Projects - responsives */
+/* @media and  */
