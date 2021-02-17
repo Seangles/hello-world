@@ -145,7 +145,7 @@ section.promo::after {
 /* Promo media */
 @media screen and (max-width: 768px) {
     .aligner {
-        margin: 85px 18px 35px;
+        margin: 70px 18px 45px;
         width: initial;
         max-width: initial;
         padding: 0;
