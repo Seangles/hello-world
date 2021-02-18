@@ -16,10 +16,10 @@ hmtl, body {
 
 /* Buttons */
 button[class^="button-"] {
-    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
     border-radius: 2px;
     padding: 1.8em 0;
-    min-width: 19em;
+    width: 19em;
+    max-width: 100%;
     font-style: italic;
     border: none;
     text-transform: uppercase;
@@ -28,16 +28,17 @@ button[class^="button-"] {
 button.button-golden {
     background-color: #E3B873;
     color: white;
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
 }
 button.button-transparent {
     border: 1px solid white;
     background: none;
     color: white;
-    box-shadow: none;
 }
 button.header-button {
     padding: 1.1em 0;
-    min-width: 14.5em;
+    width: 14.5em;
+    max-width: 100%;
 }
 
 /* Colors */
@@ -152,11 +153,11 @@ section.promo::after {
     }
     section.promo h1 {
         font-size: 23px;
-        line-height: 133%;
+        line-height: 31px;
     }
     section.promo p {
         font-size: 14px;
-        line-height: 136%;
+        line-height: 19px;
         margin-bottom: 32px;
     }
     .promo_buttons .button-transparent {
@@ -219,7 +220,7 @@ section.promo::after {
 }
 .projects_tabs a{
     text-decoration: none;
-    color: #FFF5;
+    color: rgba(255, 255, 255, 0.3);
     padding-bottom: 5px;
 }
 .projects_list .active.golden {
@@ -283,38 +284,51 @@ section.promo::after {
 .projects_nav_list {
     display: flex;
     justify-content: space-between;
-    width: 200px;
+    width: 240px;
     max-width: 100%;
     align-items: center;
     flex-wrap: nowrap;
 }
 .projects_nav_list li {
-    display: inline;
+    display: inline-block;
 }
 .projects_nav_arrow, .projects_nav_dot {
     border: none;
     outline: none;
     cursor: pointer;
     /* background-size: 80px 80px; */
-    display: inline-block;
-    background-color: #0000;
+    background-color: #131313;
 }
 .projects_nav_dots_list {
     position: relative;
-    display: inline-block;
     /* top:-7px; */
-    width: auto;
 }
-.projects_nav_arrow:only-child {
-    color: white;
+
+.projects_nav_dot {
+    height: 15px;
 }
 .projects_nav_dot:only-child {
     font-size: xx-small;
-    height: 28px;
-    color: #fff6
+    /* height: 28px; */
+    color: #fff6;
 }
 .projects_nav_dot.nav_active {
     color: white;
+}
+i#pr_nav_prev, i#pr_nav_next {
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: transparent;
+    /* height: 10px; */
+    font-size: 30px;
+    position: relative;
+    top: 11px;
+}
+i#pr_nav_prev {
+    background-image: url(../icon/arrow-left.svg);
+}
+i#pr_nav_next {
+    background-image: url(../icon/arrow-right.svg);
 }
 
 /* Projects - media */
@@ -332,7 +346,7 @@ section.promo::after {
     }
     .projects_1main p {
         font-size: 14px;
-        line-height: 150%;
+        line-height: 22px;
         margin-bottom: 36px;
     }
     .projects_2picture {
@@ -357,8 +371,6 @@ section.promo::after {
         margin: 0;
     }
     .projects_nav_arrow {
-        width: 36px;
-        height: 36px;
         padding: 0;
     }
     i#pr_nav_prev, i#pr_nav_next {
@@ -366,23 +378,263 @@ section.promo::after {
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        margin-top: -400px;
-        margin-left: -11px;
+        margin-top: -370px;
+        z-index: 2;
+        top: initial;
+        width: 36px;
+        height: 36px;
     }
     i#pr_nav_prev {
         background-image: url(../icon/prev.png);
+        left: 30px;
     }
     i#pr_nav_next {
         background-image: url(../icon/next.png);
+        right: 30px;
     }
 }
 @media screen and (max-width: 550px) {
     i#pr_nav_prev, i#pr_nav_next {
-        margin-top: -330px;
+        margin-top: -300px;
     }
 }
 @media screen and (max-width: 375px) {
     i#pr_nav_prev, i#pr_nav_next {
-        margin-top: -290px;
+        margin-top: -260px;
+    }
+}
+
+/* .projects {
+    padding-bottom: 400px;
+} */
+
+.projects::after{ /* To overlap Online Control block over Projects block */
+    content: "";
+    height: 375px;
+    width: 100vw;
+    display: block;
+    position: absolute;
+    background-color: #131313;
+    z-index: -1;
+    margin-top: -1px;
+}
+
+/* * Control */
+.control_aligner {
+    width: 820px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.control_h3 {
+    font-size: 20px;
+    line-height: 28px;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+}
+
+.control_cam {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.control_cam_line {
+    content: "";
+    display: inline-block;
+    background-color: #E3B873;
+    width: 32px;
+    height: 1.55px;
+}
+.control_cam_icon {
+    display: inline-block;
+    background-image: url(../icon/control-cam.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 33px;
+    height: 28px;
+    margin: 0 8px;
+}
+
+/* Control video */
+.control_vid {
+    width: 817px;
+    max-width: 100%;
+    display: block;
+}
+.control_vid_container {
+    width: 817px;
+    max-width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.control_vid_container::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.8);
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.control_vid_play {
+    position: absolute;
+    color: white;
+    z-index: 2;
+    background-color: #E3B873;
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    border-radius: 50%;
+    box-shadow: 0 5px 30px rgba(227, 184, 115, 0.2);
+}
+
+.control_hr {
+    background-color: #E3B873;
+    width: 55px;
+    height: 1.54px;
+    border: none;
+    margin-top: 60px;
+}
+
+.control_p {
+    width: 690px;
+    max-width: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 37px;
+    color: #363636;
+}
+
+.control_form {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* .control_form_check {
+    flex-basis: 100%;
+} */
+
+.control_form_inputbox {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 35px;
+}
+
+.control_form_inputbox input {
+    border: none;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    padding-bottom: 8px;
+    padding-top: 4px;
+    width: 230px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.control_form .control_form_submit_button {
+    width: 200px;
+    max-width: 100%;
+    height: 51px;
+    font-style: normal;
+}
+
+.control_form_inputbox input::placeholder {
+    color: #363636;
+    font-size: 14px;
+    line-height: 23px;
+    font-family: 'Nunito Sans', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.control_form_inputbox label {
+    color: rgba(54, 54, 54, 0.5);
+    font-size: 13px;
+    line-height: 21px;
+    margin-bottom: 0;
+}
+
+.control_form_check {
+    font-size: 14px;
+    line-height: 23px;
+    color: #181818;
+}
+
+/* * Control media */
+@media screen and (max-width: 768px) {
+    .projects::after {
+        display: none;
+    }
+    .control {
+        background-color: #131313;
+        color: white;
+        /* position: relative;
+        margin-top: -1px; */
+    }
+    .control_h3 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .control_vid_play {
+        width: 37px;
+        height: 37px;
+        font-size: 12px;
+    }
+    i.fas.fa-play {
+        padding-left: 2.5px;
+        padding-top: 1px;
+    }
+    .control_hr {
+        margin-top: 28px;
+    }
+    .control_p {
+        font-size: 11px;
+        line-height: 19px;
+        color: #FFF;
+        margin-bottom: 60px;
+    }
+    .control_form {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-bottom: 60px;
+    }
+    .control_form_inputbox {
+        width: 340px;
+        max-width: 100%;
+    }
+    .control_form_inputbox label {
+        font-size: 13px;
+        line-height: 21px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .control_form_inputbox input {
+        background-color: #131313;
+        border-bottom-color: #FFF;
+        width: 100%;
+        color: #FFF;
+    }
+    .control_form_inputbox input::placeholder {
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFF;
+    }
+    .control_form_check {
+        color: #FFF;
+    }
+    .control_form_submit_button {
+        position: absolute;
+        bottom: -40px;
     }
 }
