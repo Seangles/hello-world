@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IC Repair Design Project</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@0;1&family=Yeseva+One&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/d5bbd858e0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="src/style/main.css" type="text/css">
 </head>
@@ -54,7 +55,7 @@
                     <div class="projects_wrapper">
                         <div class="projects_grid"> <!-- GRID -->
                             <div class="projects_1main">
-                                <h2>COMPLETED PROJECTS</h2>
+                                <h2><span class="projects_1main_title_sp">COMPLETED PROJECTS</span></h2>
                                 <p>Only a small part of the work performed by our company is presented on the site. For 14 years on in the construction market we have made happy more than 1000 families</p>
                             </div>
                             <div class="projects_2picture">
@@ -124,7 +125,7 @@
                             </div>
                             <button class="button-golden control_form_submit_button">SUBMIT</button>
                             <div class="control_form_check">
-                                <input type="checkbox" name="agreement" id="agreement">
+                                <input type="checkbox" name="agreement" id="agreement" required>
                                 <label for="agreement">I agree to the processing of personal data</label>
                             </div>
                         </form>
@@ -136,6 +137,7 @@
                 <div class="container">
                     <h3 class="repairs_title">TYPES OF REPAIR</h3>
                     <div class="repairs_icon"></div>
+
                     <div class="repairs_type_wrapper">
                         <div class="repairs_type">
                             <img class="repairs_type_img" src="src/img/pic/repairs_type_1.png" alt="Redecorating">
@@ -196,6 +198,54 @@
                     </div>
                 </div>
             </section>
+
+            <section class="measure" id="Measurement">
+                <div class="measure_wrapper">
+                    <div class="container measure-container">
+
+                        <div class="measure_info">
+                            <ul class="measure_info_ul">
+                                <li><span class="measure_info_number">01</span><span class="measure_info_text">Our specialist will arrive for measurements per day contact, or appoint a date convenient for you</span></li>
+                                <li><span class="measure_info_number">02</span><span class="measure_info_text">Free metering</span></li>
+                                <li><span class="measure_info_number">03</span><span class="measure_info_text">Free consultation</span></li>
+                                <li><span class="measure_info_number">04</span><span class="measure_info_text">Get a cost estimate and the timing of your future repairs</span></li>
+                            </ul>
+                        </div>
+
+                        <form action="" class="measure_form">
+                            <h4 class="measure_form_title -sans-serif -no_text_transform white"><span class="measure_form_title_sp">Leave a request for free departure of the measurer</span></h4>
+                            <div class="measure_form_inputbox">
+                                <label for="measure_name" class="measure_form_label">Name</label>
+                                <input type="text" name="measure_name" id="measure_name" placeholder="What is your name:" class="measure_form_input" required>
+                            </div>
+                            <div class="measure_form_inputbox">
+                                <label for="measure_phone" class="measure_form_label">Phone</label>
+                                <input type="tel" name="measure_phone" id="measure_phone" placeholder="Your phone number:" class="measure_form_input" required>
+                            </div>
+                            <div class="measure_form_inputbox">
+                                <label for="measure_email" class="measure_form_label">Email</label>
+                                <input type="email" name="measure_email" id="measure_email" placeholder="Your email:" class="measure_form_input" required>
+                            </div>
+                            <div class="measure_form_checkbox">
+                                <input type="checkbox" name="measure_agreement" id="measure_agreement" class="measure_form_check" required>
+                                <label for="measure_agreement" class="measure_form_check_label white">I agree to the processing of personal data</label>
+                            </div>
+                            <button class="button-golden measure_form_submit">CALL THE MEASURER</button>
+                        </form>
+                    
+                    </div>
+                </div>
+
+                <div class="container measure_cashback-container">
+                    <div class="measure_cashback">
+                        <span class="measure_cashback_pig">.</span>
+                        <p class="measure_cashback_p golden">Help save 10 - 20% of the cost of materials</p>
+                    </div>
+                </div>
+            </section>
+
+            
+
             <!-- TODO: <h3>WE REALIZE YOUR WILDEST FANTASIES</h3> -->
         </main>
         <footer class="main-footer"></footer>
