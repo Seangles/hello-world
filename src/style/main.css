@@ -1308,7 +1308,7 @@ i#pr_nav_next {
     .fanta_pics {
         position: relative;
         width: 90%;
-        height: calc(100vw / 1.7);
+        height: calc(100vw * 0.9 / 1.7);
         align-items: center;
     }
     .fanta_pics_left {
@@ -1541,7 +1541,7 @@ i#pr_nav_next {
         display: block;
         position: absolute;
         width: 100%;
-        height: 56%;
+        height: 54%;
         background-color: white;
     }
     .fanta_info_inner h2 {
