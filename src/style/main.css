@@ -1064,9 +1064,6 @@ i#pr_nav_next {
     }
 }
 @media screen and (max-width: 390px) {
-    .measure_info_number {
-
-    }
     .measure_cashback_p {
         font-size: 14px;
     }
@@ -1334,10 +1331,7 @@ i#pr_nav_next {
         height: calc(100vw * 0.9 / 1.7);
         align-items: center;
     }
-    .fanta_pics_left {
-        /* min-height: 213px; */
-        /* position: absolute; */
-    }
+    
     .fanta_pics_left_top {
         display: none;
     }
