@@ -1615,9 +1615,12 @@ i#pr_nav_next {
 
 @media screen and (max-width: 375px) {
     .fanta {
-        background-color: white;
-        padding-top: 20px;
+        /* background-color: white; */
+        padding-top: 0;
         margin-top: 0;
+    }
+    .measure_form {
+        padding-bottom: 40px;
     }
 }
 
