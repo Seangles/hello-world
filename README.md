@@ -1,4 +1,4 @@
 # hello-world
 My first repository on GitHub
 
-Yep changed
+Go to https://seangles.github.io/hello-world/ to see the page
